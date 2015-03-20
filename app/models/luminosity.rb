@@ -1,0 +1,2 @@
+class Luminosity < PlantData
+end

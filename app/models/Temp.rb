@@ -1,0 +1,2 @@
+class Temp < PlantData
+end
