@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem "mongoid", "~> 4.0.0"
 gem 'active_model_serializers'
 gem 'mongoid-serializer'
+gem 'wombat';
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -43,4 +44,4 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
