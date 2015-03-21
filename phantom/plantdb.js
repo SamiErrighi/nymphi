@@ -1,4 +1,4 @@
-var FlowerPower = require('node-flower-power');
+var FlowerPower = require('parrot');
 var _           = require('underscore');
 var request     = require('request');
 
