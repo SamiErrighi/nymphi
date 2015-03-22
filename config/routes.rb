@@ -4,13 +4,15 @@ EmpathiePlante::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   #root 'welcome#index'
-  namespace :api do
-    resources :plants
-    resources :profiles
-    resources :plants_datas
-    resources :humidities
-    resources :playlists
-  end
+    namespace :api do
+      namespace :v1 do
+        resources :plants
+        resources :profiles
+        resources :plants_datas
+        resources :humidities
+        resources :playlists
+      end
+    end
 
 
   # Example of regular route:
