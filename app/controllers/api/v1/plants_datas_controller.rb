@@ -23,7 +23,7 @@ module Api
             'maxLight': light[1],
             'minTemp': Profile.first.plant.temperature_min,
             'maxTemp': Profile.first.plant.temperature_max,
-        }
+        }.to_json
         render json: data
       end
     end
