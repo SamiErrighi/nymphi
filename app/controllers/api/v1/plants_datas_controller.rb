@@ -17,13 +17,13 @@ module Api
         water = Humidity::min_max
         light = Luminosity::min_max
         data = {
-            'minWater': water[0],
-            'maxWater': water[1],
-            'minLight': light[0],
-            'maxLight': light[1],
-            'minTemp': Profile.first.plant.temperature_min,
-            'maxTemp': Profile.first.plant.temperature_max,
-        }.to_json
+            :minWater => water[0],
+            :maxWater => water[1],
+            :minLight => light[0],
+            :maxLight => light[1],
+            :minTemp => Profile.first.plant.temperature_min,
+            :maxTemp => Profile.first.plant.temperature_max,
+        }
         render json: data
       end
     end
