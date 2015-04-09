@@ -4,10 +4,14 @@ module Api
 
       def index
         @plants = Plant.all
-        render json: @plants
+        render json: @plants, status: 200
       end
 
       def show
+        @plant = Plant.find(params[:id])
+        if @plant
+            render json: @plant, status: 200
+        end
       end
 
       def create

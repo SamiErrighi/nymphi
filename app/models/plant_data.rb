@@ -1,5 +1,5 @@
 class PlantData
   include Mongoid::Document
   field :value, type: Float
-  belongs_to :plant
+  belongs_to :profile
 end

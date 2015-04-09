@@ -1,4 +1,4 @@
-class PlantSerializer < ActiveModel::MongoidSerializer
+class PlantSerializer < ActiveModel::Serializer
   attributes :id,
              :name,
              :planting,
@@ -13,5 +13,11 @@ class PlantSerializer < ActiveModel::MongoidSerializer
              :fertilizer,
              :sun,
              :water,
-             :seasons
+             :seasons,
+             :profile_ids
+    def profile_ids
+        object.profiles.map { |p|
+            p.id
+        }
+    end
 end

@@ -15,4 +15,5 @@ class Plant
   field :sun,                type: Integer
   field :water,              type: Integer
   field :seasons,            type: Hash
+  has_many :profiles
 end   

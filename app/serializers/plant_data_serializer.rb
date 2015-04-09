@@ -1,3 +1,3 @@
-class PlantDataSerializer < ActiveModel::MongoidSerializer
+class PlantDataSerializer < ActiveModel::Serializer
   attributes :id, :value
 end
