@@ -20,7 +20,9 @@ module Api
             'minWater': water[0],
             'maxWater': water[1],
             'minLight': light[0],
-            'maxLight': light[1]
+            'maxLight': light[1],
+            'minTemp': Profile.first.plant.temperature_min,
+            'maxTemp': Profile.first.plant.temperature_max
         }
       end
     end
