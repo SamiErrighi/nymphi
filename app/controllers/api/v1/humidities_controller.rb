@@ -8,8 +8,9 @@ module Api
 
       def create
         humidity = Humidity.new(humidity_params)
+        humidity.profile = Profile.first
         humidity.save
-        render json: "creatred", status: 201
+        render json: "created", status: 201
       end
 
       private
