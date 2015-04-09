@@ -17,6 +17,7 @@ gem 'active_model_serializers'
 gem 'wombat'
 gem "bower-rails", "~> 0.9.2"
 gem 'rack-cors', :require => 'rack/cors'
+gem 'simple_form'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

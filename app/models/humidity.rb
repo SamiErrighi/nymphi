@@ -5,4 +5,11 @@ class Humidity < PlantData
        indice = water * @max / 5
        value.to_i < indice ? false: true
     end
+
+    def self.min_max
+        moyWater = Profile.first.plant.water * 1000 / 5
+        minWater = moyWater - 250
+        maxWater = moyWater + 250
+        [minWater, maxWater]
+    end
 end

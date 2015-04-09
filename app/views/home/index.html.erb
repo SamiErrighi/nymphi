@@ -1,1 +1,20 @@
 <%= @profile.name %>
+<%= @profile.plant.planting.html_safe %>
+<%= @profile.plant.pests.html_safe %>
+<%= @profile.plant.blooming.html_safe %>
+<%= @profile.plant.fertilization.html_safe %>
+<%= @profile.plant.species_name %>
+<%= @profile.plant.latin_name %>
+<%= @profile.plant.hardiness_zone_min %>
+<%= @profile.plant.temperature_max %>
+<%= @profile.plant.temperature_min %>
+<%= @profile.plant.fertilizer %>
+<%= @profile.plant.sun %>
+<%= @profile.plant.water %>
+<%= simple_form_for @profile do |f| %>
+    <label>Name</label>
+    <%= f.input :name, :label => false %>
+    <label>Name</label>
+    <%= f.association :plant, :label => false %>
+    <%= f.button :submit %>
+<% end %>

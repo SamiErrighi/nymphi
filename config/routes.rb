@@ -4,8 +4,10 @@ EmpathiePlante::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  resources :profiles
     namespace :api do
       namespace :v1 do
+        get 'plants_datas/info' => 'plants_datas#info'
         resources :plants
         resources :profiles
         resources :plants_datas
