@@ -42,7 +42,7 @@ end
 # gem 'capistrano', group: :development
 
 group :test, :development do
-  gem 'rspec-rails'
+  #gem 'rspec-rails'
   #gem 'shoulda-matchers'
   #gem 'pry-byebug'
   #gem 'shoulda'
