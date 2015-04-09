@@ -12,6 +12,9 @@ module Api
         humidity.save
         render json: "created", status: 201
       end
+        def check
+            render json: Humidity::check(params[:value])
+        end
 
       private
       def humidity_params

@@ -12,6 +12,9 @@ EmpathiePlante::Application.routes.draw do
         resources :humidities
         resources :playlists
         get 'plants_datas/:humidity/:luminosity/:temp' => 'plants_datas#add'
+        get 'humidities/check/:value' => 'humidities#check'
+        get 'temperatures/check/:value' => 'temperatures#check'
+        get 'luminosities/check/:value' => 'luminosities#check'
       end
     end
 
