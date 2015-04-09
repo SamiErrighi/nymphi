@@ -11,6 +11,7 @@ EmpathiePlante::Application.routes.draw do
         resources :plants_datas
         resources :humidities
         resources :playlists
+        get 'plants_datas/:humidity/:luminosity/:temp' => 'plants_datas#add'
       end
     end
 
