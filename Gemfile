@@ -43,7 +43,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
-  gem 'pry-byebug'
-  gem 'shoulda'
+  #gem 'shoulda-matchers'
+  #gem 'pry-byebug'
+  #gem 'shoulda'
 end
