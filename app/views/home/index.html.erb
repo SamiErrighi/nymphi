@@ -1,16 +1,3 @@
-<%= @profile.name %>
-<%= @profile.plant.planting.html_safe %>
-<%= @profile.plant.pests.html_safe %>
-<%= @profile.plant.blooming.html_safe %>
-<%= @profile.plant.fertilization.html_safe %>
-<%= @profile.plant.species_name %>
-<%= @profile.plant.latin_name %>
-<%= @profile.plant.hardiness_zone_min %>
-<%= @profile.plant.temperature_max %>
-<%= @profile.plant.temperature_min %>
-<%= @profile.plant.fertilizer %>
-<%= @profile.plant.sun %>
-<%= @profile.plant.water %>
 <%= simple_form_for @profile do |f| %>
     <label>Name</label>
     <%= f.input :name, :label => false %>
@@ -18,3 +5,32 @@
     <%= f.association :plant, :label => false %>
     <%= f.button :submit %>
 <% end %>
+
+<h1><%= @profile.name %></h1>
+<ul id="leftColumn">
+	<li>
+		<%= image_tag('sunleft.png') %>
+		<span>Ensoleillement :</span>
+		<span id="light" class=<%= @profile.luminosities.last.state %>><%= @profile.luminosities.last.value %></span>
+	</li>
+	<li>
+		<%= image_tag('waterleft.png') %>
+		<span>Humidité :</span>
+		<span id="water" class=<%= @profile.humidities.last.state %>><%= @profile.humidities.last.value %></span>
+	</li>
+	<li>
+		<%= image_tag('termoleft.png') %>
+		<span>Température :</span>
+		<span id="temp" class=<%= @profile.luminosities.last.state %>><%= @profile.luminosities.last.value %> °C</span>
+	</li>
+</ul>
+<div id="rightcolumn">
+	<%= image_tag('goodright.png') %>
+	<h2>Be good</h2>
+</div>
+
+<%= @profile.plant.planting.html_safe %>
+<%= @profile.plant.pests.html_safe %>
+<%= @profile.plant.blooming.html_safe %>
+<%= @profile.plant.fertilization.html_safe %>
+<%= @profile.plant.hardiness_zone_min %>

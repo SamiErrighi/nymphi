@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="app">
-
+	<header>
+		<span id="header">Nymphi</span>
+		<logo><%= image_tag('feuilletop.png') %></logo>
+	</header>
 <%= yield %>
-
+	<footer>
+		<ul id="community">
+			<li><a href="">f</a></li>
+			<li><a href="">k</a></li>
+			<li><a href="">g</a></li>
+		</ul>
+		<div id="copyright">LPDW 2014 - 2015 -- Project on <a href="">GitHub</a> <img src""/></div>
+	</footer>
 </body>
 </html>

@@ -12,4 +12,17 @@ class Luminosity < PlantData
         maxLight = moyLight + 250
         [minLight, maxLight]
     end
+    def state
+       moyLight = Profile.first.plant.sun * 1000 / 5
+       minLight = moyLight - 250
+       maxLight = moyLight + 250
+
+       if self.value <= maxLight && self.value >= minLight
+           "green"
+       elsif self.value > maxLight
+           "red"
+       else
+           "blue"
+       end
+   end
 end
