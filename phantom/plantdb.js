@@ -4,9 +4,9 @@ var request     = require('request');
 
 var auth = {
   username: 'sami.errighi@gmail.com',
-  password: '2vv2qqt',
+  password: 'password',
   client_id: 'sami.errighi@gmail.com',
-  client_secret: 'uf1kbueUuMx75qAE7KgycnBSgenZSO5gv0FaMBaMkJ6hRMUO',
+  client_secret: 'key',
 };
 
 var api = new FlowerPower(auth, function(err, data) {
