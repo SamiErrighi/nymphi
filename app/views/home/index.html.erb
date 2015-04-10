@@ -1,11 +1,3 @@
-<%= simple_form_for @profile do |f| %>
-    <label>Name</label>
-    <%= f.input :name, :label => false %>
-    <label>Name</label>
-    <%= f.association :plant, :label => false %>
-    <%= f.button :submit %>
-<% end %>
-
 <h1><%= @profile.name %></h1>
 <ul id="leftColumn">
 	<li>
@@ -25,8 +17,6 @@
 	</li>
 </ul>
 <div id="rightcolumn">
-	<%= image_tag('goodright.png') %>
-	<h2>Be good</h2>
 </div>
 
 <%= @profile.plant.planting.html_safe %>
