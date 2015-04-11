@@ -8,11 +8,11 @@ EmpathiePlante::Application.routes.draw do
     namespace :api do
       namespace :v1 do
         get 'plants_datas/info' => 'plants_datas#info'
-        resources :plants
-        resources :profiles
-        resources :plants_datas
-        resources :humidities
-        resources :playlists
+        resources :plants, only: [:index, :show]
+        resources :profiles, except: :destroy
+        resources :plants_datas, except: :destroy
+        resources :humidities, except: :destroy
+        resources :playlists, except: :destroy
         get 'plants_datas/:humidity/:luminosity/:temp' => 'plants_datas#add'
         get 'humidities/check/:value' => 'humidities#check'
         get 'temperatures/check/:value' => 'temperatures#check'
